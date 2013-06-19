@@ -16,12 +16,14 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Client.d.ts" />
     <Content Include="Client.js">
       <DependentUpon>Client.ts</DependentUpon>
     </Content>
     <Content Include="Client.js.map">
       <DependentUpon>Client.ts</DependentUpon>
     </Content>
+    <Content Include="index.js" />
     <Content Include="node.d.ts" />
     <Content Include="restify.d.ts" />
   </ItemGroup>
@@ -31,6 +33,9 @@
   <ItemGroup>
     <Content Include="package.json" />
     <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".npmignore" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
