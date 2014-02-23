@@ -1,0 +1,11 @@
+
+# /
+/bin
+/obj
+/node_modules
+/output
+/*.user
+
+# /test/
+/test/*.map
+/test/*.js
