@@ -3,14 +3,14 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         typescript: {
             base: {
-                src: ['Client.ts'],
-                dest: './',
+                src: ['Client.ts', 'test/*.ts'],
+                // dest: './',
                 options: {
                     module: 'commonjs', //or commonjs
                     target: 'es5', //or es3
                     // base_path: 'path/to/typescript/files',
                     sourcemap: true,
-                    declaration: true
+                    declaration: false
                 }
             }
         },

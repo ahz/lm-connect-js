@@ -1,8 +1,13 @@
+node_modules
 
 # /
 /bin
+/obj
 /Client.js
 /Client.js.map
-/node_modules
-/obj
+/output
 /*.user
+
+# /test/
+/test/*.js.map
+/test/*.js
