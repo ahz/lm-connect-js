@@ -1,4 +1,4 @@
-declare module 'SewebarConnect' {
+declare module 'lm-connect-js' {
     export function createClient(cfg): SewebarConnectClient;
 
     export class SewebarConnectClient {
