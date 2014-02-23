@@ -3,12 +3,20 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         typescript: {
             base: {
-                src: ['Client.ts', 'test/*.ts'],
-                // dest: './',
+                src: ['Client.ts'],
+                dest: './dist',
                 options: {
-                    module: 'commonjs', //or commonjs
-                    target: 'es5', //or es3
-                    // base_path: 'path/to/typescript/files',
+                    module: 'commonjs',
+                    target: 'es5',
+                    sourcemap: true,
+                    declaration: false
+                }
+            },
+            tests: {
+                src: ['Client.ts', 'test/*.ts'],
+                options: {
+                    module: 'commonjs',
+                    target: 'es5',
                     sourcemap: true,
                     declaration: false
                 }
@@ -54,14 +62,14 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-typescript');
+
     // grunt.loadNpmTasks('grunt-contrib-uglify');
     // grunt.loadNpmTasks('grunt-contrib-jshint');
     // grunt.loadNpmTasks('grunt-contrib-qunit');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     // grunt.loadNpmTasks('grunt-contrib-concat');
 
-    // grunt.registerTask('test', ['jshint', 'qunit']);
-
-    grunt.registerTask('default', ['typescript']);
+    grunt.registerTask('test', ['typescript:tests']);
+    grunt.registerTask('default', ['typescript:base']);
 };
