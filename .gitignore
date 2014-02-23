@@ -1,12 +1,14 @@
 node_modules
 
 # /
+/dist/*.js.map
 /bin
 /obj
 /Client.js
 /Client.js.map
 /output
 /*.user
+/*.suo
 
 # /test/
 /test/*.js.map

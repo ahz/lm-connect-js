@@ -17,15 +17,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Client.d.ts" />
-    <Content Include="Client.js">
-      <DependentUpon>Client.ts</DependentUpon>
-    </Content>
-    <Content Include="Client.js.map">
-      <DependentUpon>Client.ts</DependentUpon>
-    </Content>
     <Content Include="data2xml.d.ts" />
     <Content Include="Gruntfile.js" />
-    <Content Include="index.js" />
     <Content Include="node.d.ts" />
     <Content Include="restify.d.ts" />
     <Content Include="string.d.ts" />
@@ -97,9 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="config.json" />
-    <Content Include="makefile" />
     <Content Include="package.json" />
-    <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="test\mocha.opts" />
