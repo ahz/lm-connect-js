@@ -1,5 +1,5 @@
 {
-  "name": "lm-connect",
+  "name": "lm-connect-js",
   "version": "0.0.2",
   "dependencies": {
     "restify": "2.4.1",
