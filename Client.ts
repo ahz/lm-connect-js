@@ -50,6 +50,8 @@ export class SewebarConnectClient {
             host: "127.0.0.1",
             port: 8888,
             path: 'url',
+            accept: 'application/xml',
+            'content-type': 'application/xml',
             headers: {
                 Host: 'localhost'
             }
@@ -59,6 +61,8 @@ export class SewebarConnectClient {
 
         // TODO: avoid changing cfg itself
         this.opts = cfg;
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+        this.opts.contentType = 'application/xml';
         this.server = this.opts.app == null ? 'SewebarConnect' : this.opts.app;
 
         if (this.server.substring(0, 1) !== '/') {
